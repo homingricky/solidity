@@ -55,7 +55,7 @@ contract SimpleAuction {
         return true;
     }
 
-    function auctionEnd() private {
+    function auctionEnd() public {
         if (block.timestamp < auctionEndTime){
             revert("The auction has not ended yet");
         }
